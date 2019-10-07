@@ -9,16 +9,12 @@ import { TouchSequence } from 'selenium-webdriver';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  implements OnInit{
-  title = 'movie-app';
-  myMovies:any = [];
+
 
   constructor(private movieService:MovieServiceService){}
 
  ngOnInit(){
-    this.movieService.getMovieInfo().subscribe((data)=>{
-      this.myMovies = data.Search;
-      console.log(this.myMovies);
-    });
+  
   }
 
 }
